@@ -156,27 +156,29 @@ void loop()
                 //Serial.print("I received: ");
                 //Serial.println(incomingByte, DEC);
                 //sendSerialData();  
-      Serial.print("BSQ26-DHTstatus ");
+      Serial.print("ALAMEDA1337-DHTstatus ");
       Serial.print(dht.getStatusString());
       Serial.println(" ");
-      //Serial.print(" Moisture1 ");
-      //Serial.print(moisture1);
-      //Serial.print(", Moisture2 ");
-      //Serial.print(moisture2);
-      //Serial.print(", Moisture3 ");
-      //Serial.print(moisture3);
-      //Serial.print(", Moisture4 ");
-      //Serial.print(moisture4);
-      Serial.print("BSQ26-Humidity ");
+      Serial.print("ALAMEDA1337-Moisture ");
+      Serial.print(" Moisture1 ");
+      Serial.print(moisture1);
+      Serial.print(", Moisture2 ");
+      Serial.print(moisture2);
+      Serial.print(", Moisture3 ");
+      Serial.print(moisture3);
+      Serial.print(", Moisture4 ");
+      Serial.print(moisture4);
+      Serial.println(" ");
+      Serial.print("ALAMEDA1337-Humidity ");
       Serial.print(humidity, 1);
       Serial.println(" ");
-      Serial.print("BSQ26-Celsius ");
+      Serial.print("ALAMEDA1337-Celsius ");
       Serial.print(temperature, 1);
       Serial.println(" ");
-      Serial.print("BSQ26-Fahrenheit ");
+      Serial.print("ALAMEDA1337-Fahrenheit ");
       Serial.print(dht.toFahrenheit(temperature), 1);
       Serial.println(" ");
-      Serial.println("BSQ26-ENDTRANSMISSION");
+      Serial.println("3478-ENDTRANSMISSION");
        // }
       // read three sensors and append to the string:
       /* for (int analogPin = 0; analogPin < 3; analogPin++) {
@@ -235,8 +237,7 @@ void digitalClockDisplay(){
   Serial.println();
 }
 
-void printDigits(int digits){
-  // utility function for digital clock display: prints preceding colon and leading 0
+void printDigits(int digits){ // utility function for digital clock display: prints preceding colon and leading 0
   Serial.print(":");
   if(digits < 10)
     Serial.print('0');
