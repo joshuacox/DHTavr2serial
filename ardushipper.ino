@@ -148,9 +148,9 @@ void loop()
         }
          // make a string for assembling the data to log:
       String dataString = "";
-      if (Serial.available() > 0) {
+      //if (Serial.available() > 0) {
                 // read the incoming byte:
-                incomingByte = Serial.read();
+          //      incomingByte = Serial.read();
 
                 // say what you got:
                 //Serial.print("I received: ");
@@ -177,7 +177,7 @@ void loop()
       Serial.print(dht.toFahrenheit(temperature), 1);
       Serial.println(" ");
       Serial.println("BSQ26-ENDTRANSMISSION");
-        }
+       // }
       // read three sensors and append to the string:
       /* for (int analogPin = 0; analogPin < 3; analogPin++) {
         int sensor = analogRead(analogPin);
