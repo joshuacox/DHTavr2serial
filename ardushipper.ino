@@ -8,11 +8,23 @@
 #define TIME_HEADER  'T'   // Header tag for serial time sync message
 #define TIME_REQUEST  7    // ASCII bell character requests a time sync message 
 
-const int VAL_PROBE1 = 0; // Analog pin 0
+// DHT 11 or 22 needs a digital pin to communicate on
+const int DHT_PIN = 2; // digital pin 2
+// set pins for the outlet relays
+const int OUTLET_PIN_1 = 4; // digital pin 4
+const int OUTLET_PIN_2 = 5; // digital pin 5
+const int OUTLET_PIN_3 = 6; // digital pin 6
+const int OUTLET_PIN_4 = 7; // digital pin 7
+const int OUTLET_PIN_5 = 8; // digital pin 8
+const int OUTLET_PIN_6 = 9; // digital pin 9
+const int OUTLET_PIN_7 = 10; // digital pin 10
+const int OUTLET_PIN_8 = 11; // digital pin 11
 
+const int VAL_PROBE1 = 0; // Analog pin 0
 const int VAL_PROBE2 = 1; // Analog pin 1
 const int VAL_PROBE3 = 2; // Analog pin 2
 const int VAL_PROBE4 = 3; // Analog pin 3
+
 const int MOISTURE_LEVEL = 250; // the value after the LED goes ON
 
 void LedState(int state) {
@@ -87,7 +99,7 @@ void setup()
   //Serial.println();
   Serial.println("Status\tHumidity (%)\tTemperature (C)\t(F) v1.1");
 
-  dht.setup(2); // data pin 2
+  dht.setup(DHT_PIN); // data pin
 
   String initdataString = "";
   initdataString += "SoilMoisture1"; 
