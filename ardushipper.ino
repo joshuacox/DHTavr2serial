@@ -36,6 +36,13 @@ int incomingByte = 0;
 
 DHT dht;
 
+void printDigits(int digits){ // utility function for digital clock display: prints preceding colon and leading 0
+  Serial.print(":");
+  if(digits < 10)
+    Serial.print('0');
+  Serial.print(digits);
+}
+
 /*
   SD card datalogger
  
@@ -247,13 +254,6 @@ void digitalClockDisplay(){
   Serial.print(" ");
   Serial.print(year());
   Serial.println();
-}
-
-void printDigits(int digits){ // utility function for digital clock display: prints preceding colon and leading 0
-  Serial.print(":");
-  if(digits < 10)
-    Serial.print('0');
-  Serial.print(digits);
 }
 
 void processSyncMessage() {
